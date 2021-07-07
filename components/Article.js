@@ -150,7 +150,6 @@ return article
 componet()
 componet()
 let newA = document.querySelector('.articles')
-console.log(newA)
 
 let articles = document.querySelector('.articles')
 //newA.forEach(e => e.appendChild(articles))
