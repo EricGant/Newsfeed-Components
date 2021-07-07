@@ -114,3 +114,42 @@ const data = [
   Step 5: Try adding new article object to the data array. Make sure it is in the same format as the others.
   Refresh the page to see the new article.
 */
+
+let doc = document.querySelector('.articles')
+
+function componet(){
+let h2 = document.createElement('h2')
+let pone = document.createElement('p')
+pone.classList.add('date')
+let ptwo = document.createElement('p')
+ptwo.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+let pthree = document.createElement('p')
+pthree.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+let pfour = document.createElement('p')
+pfour.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+h2.textContent = `Lambda News`
+let span = document.createElement('span')
+span.textContent = `+`
+span.classList.add('expandButton')
+
+let article = document.createElement('div')
+article.classList.add('article')
+
+doc.appendChild(article)
+article.appendChild(h2)
+article.appendChild(pone)
+article.appendChild(ptwo)
+article.appendChild(pthree)
+article.appendChild(pfour)
+article.appendChild(span)
+article.querySelector('span').addEventListener("click", e => {
+article.classList.toggle("article-open")
+})
+return article
+}
+componet()
+componet()
+let newA = document.querySelector('.articles')
+
+let articles = document.querySelector('.articles')
+//newA.forEach(e => e.appendChild(articles))
